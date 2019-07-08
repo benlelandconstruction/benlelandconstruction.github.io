@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="jquery.js"></script>  
+<script type="text/javascript" src="supersized.1.0.js"></script>
+<script type="text/javascript">
+$(function(){  
+    $.fn.supersized.options = {  
+        startwidth: 1024,  
+        startheight: 768,  
+        minsize: .5,  
+        slideshow: 1,  
+        slideinterval: 5000  
+    };  
+        $('#supersize').supersized();  
+});
+
+</script>
+<style>
+body {  
+        overflow:hidden;  
+}  
+#supersize img, #supersize a{  
+    height:100%;  
+    width:100%;  
+    display:none;  
+}  
+#supersize .activeslide, #supersize .activeslide img{  
+    display:inline;  
+}  
+</style>
+
+</head>
+
+<body>
+<div id="supersize">  
+       <img class="activeslide" src="template images/Mercer Island ELC_013.jpg"/>  
+       <a href="#"><img src="picture2.jpg"/></a>  
+</div> 
+</body>
+</html>

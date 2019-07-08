@@ -1,0 +1,113 @@
+/*
+
+	Supersized - Fullscreen Slideshow jQuery Plugin
+	Version : 3.2.7
+	Site	: www.buildinternet.com/project/supersized
+	
+	Author	: Sam Dunn
+	Company : One Mighty Roar (www.onemightyroar.com)
+	License : MIT License / GPL License
+	
+*/
+
+
+#supersized-loader 
+	{ 
+		position:absolute; 
+		top:50%; 
+		left:50%; 
+		z-index:0; 
+		width:60px; 
+		height:60px; 
+		margin-top: -30px;
+		margin-left:0px;
+		margin-right:0px;
+		margin-bottom:-30px;
+		text-indent:-999em;
+		background-image:url(../img/progress.gif);
+		background-repeat:no-repeat;
+		background-position:center center;
+
+	}
+	
+#supersized 
+	{  
+		display:block; 
+		position:fixed; 
+		left:0; 
+		top:0; 
+		overflow:hidden; 
+		z-index:1; 
+		height:100%; 
+		width:100%;
+		margin-top:-90px;
+		margin-left:-3px;
+		
+	}
+	
+#supersized img 
+	{ 
+	width:auto; 
+	height:auto; 
+	position:relative; 
+	display:none; 
+	outline:none; 
+	border:none;
+	}
+	
+* html #supersized /* IE6 position fixed Bottom */{position:absolute;bottom:auto;top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}
+
+#supersized.speed img 
+	{ 
+		-ms-interpolation-mode:nearest-neighbor; 
+		image-rendering: -moz-crisp-edges; 
+	}
+	
+	
+#supersized.quality img 
+	{ 
+	
+		-ms-interpolation-mode:bicubic; 
+		image-rendering: optimizeQuality; 
+		
+	}			
+#supersized li 
+	{ 
+		display:block; 
+		list-style:none; 
+		z-index:-30; 
+		position:fixed; 
+		overflow:hidden; 
+		top:0; 
+		left:0; 
+		width:100%; 
+		height:100%; 
+		background-color:#111; 
+	}
+#supersized a 
+{ 
+	width:100%; 
+	height:100%; 
+	display:block; 
+}
+
+#supersized li.prevslide { z-index:-20; }
+
+#supersized li.activeslide { z-index:999; }
+
+#supersized li.image-loading 
+	{ 
+	
+	background-image:url(../img/progress.gif);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-color:#111111;
+	width:100%; 
+	height:100%; 
+	}
+
+#supersized li.image-loading img{ visibility:hidden; }
+
+#supersized li.prevslide img, #supersized li.activeslide img{ display:inline; }
+			
+			

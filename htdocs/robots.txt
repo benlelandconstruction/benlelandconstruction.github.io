@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /oldfiles/
+Disallow: /sample/
+Disallow: /preview/
+Disallow: /flash/
